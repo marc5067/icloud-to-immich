@@ -28,7 +28,7 @@ This Python script downloads photos from iCloud, organizes them into albums, and
   - Install immich-go: Follow the instructions at immich-go.
 
 ## Set up variables:
-Edit variables with your credentials inside the if __name__ == "__main__": block.:\
+Edit variables with your credentials inside the `if __name__ == "__main__":` block:
 - ICLOUD_USERNAME = icloud_username
 - IMMICH_API = immich api key
 - ADMIN_API_KEY = immich admin api key
