@@ -29,10 +29,10 @@ This Python script downloads photos from iCloud, organizes them into albums, and
 
 ## Set up variables:
 Edit variables with your credentials inside the if __name__ == "__main__": block.:\
-- ICLOUD_USERNAME=your_icloud_username
-- IMMICH_API=your_immich_api_key
-- IMMICH_SERVER=https://your-immich-server.com
-- ADMIN_API_KEY=your_admin_api_key
+- ICLOUD_USERNAME = icloud_username
+- IMMICH_API = immich api key
+- ADMIN_API_KEY = immich admin api key
+- IMMICH_SERVER = immich url
 - interactive: Enables interactive prompts for user confirmation (default: enabled(True)).
 
 ## Usage
