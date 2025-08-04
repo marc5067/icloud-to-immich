@@ -17,7 +17,7 @@ This Python script downloads photos from iCloud, organizes them into albums, and
 ## Installation
 - Clone the repository:
   ```bash
-  git clone https://github.com/your-username/icloud-to-immich-sync.git
+  git clone https://github.com/marc5067/icloud-to-immich.git
   cd icloud-to-immich-sync
   ```
   OR
@@ -42,9 +42,9 @@ OR
 `py download_icloud.py`
 
 ## Troubleshooting
-Authentication failed: Verify your ICLOUD_USERNAME and ensure two-factor authentication is set up correctly.
-Tool not found: Ensure icloudpd and immich-go are installed and accessible in your system's PATH.
-Upload errors: Check the Immich server URL and API keys in the .env file.
+### Authentication failed: Verify your ICLOUD_USERNAME and ensure two-factor authentication is set up correctly.
+### Tool not found: Ensure icloudpd and immich-go are installed and accessible in your system's PATH.
+### Upload errors: Check the Immich server URL and API keys in the .env file.
 
 ## FUTURE
 - add option to delete pictures from iCloud when they are downloaded (move them to Recently Deleted)
