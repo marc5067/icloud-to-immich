@@ -42,9 +42,9 @@ OR
 `py download_icloud.py`
 
 ## Troubleshooting
-### Authentication failed: Verify your ICLOUD_USERNAME and ensure two-factor authentication is set up correctly.
-### Tool not found: Ensure icloudpd and immich-go are installed and accessible in your system's PATH.
-### Upload errors: Check the Immich server URL and API keys in the .env file.
+- Authentication failed: Verify your ICLOUD_USERNAME and ensure two-factor authentication is set up correctly.
+- Tool not found: Ensure icloudpd and immich-go are installed and accessible in your system's PATH.
+- Upload errors: Check the Immich server URL and API keys in the .env file.
 
 ## FUTURE
 - add option to delete pictures from iCloud when they are downloaded (move them to Recently Deleted)
