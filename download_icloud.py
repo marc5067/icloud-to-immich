@@ -4,7 +4,6 @@ import sys
 import re
 import shutil
 from collections import defaultdict
-from dotenv import load_dotenv
 
 def sanitize_name(name):
     """Sanitize the album name to make it a valid directory name."""
@@ -31,10 +30,6 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
     if not os.path.exists('.env'):
         print("Error: .env file not found")
         sys.exit(1)
-
-    load_dotenv()
-
- 
 
     if not USERNAME or not USER_API:
         print("Error: Missing iCloud username or immich api in .env file")
@@ -194,11 +189,12 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
 
 
 if __name__ == "__main__":
-    base_dir = "C:\\Users\\user\\Documents\\images"  # Change this to your desired base directory
-    interactive = True   # Set to False if you want to run non-interactively
+    base_dir = "C:\\Users\\user\\Documents\\images"  # Change this to your desired base directory. You must use double backslashes in Windows paths.
+    
     USERNAME="example.example@gmail.com"  #change to your iCloud username
     USER_API="your_api"  #change to your Immich API
-    IMMICH_SERVER = "admin_api"  #change to your Immich admin API
-    ADMIN_API_KEY = "http://192.168.0.214:30033"  #change to your Immich server url
-    
+    ADMIN_API_KEY = "admin_api"  #change to your Immich admin API
+    IMMICH_SERVER = "http://192.168.0.214:30033"  #change to your Immich server url
+    interactive = True   # Set to False if you want to run non-interactively
+
     start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactive)
