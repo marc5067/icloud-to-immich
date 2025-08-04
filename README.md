@@ -25,7 +25,7 @@ This Python script downloads photos from iCloud, organizes them into albums, and
 
 - Install external tools:
   - Install icloudpd: `pip install icloudpd`
-  - Install immich-go: Follow the instructions at immich-go.
+  - Install immich-go: Follow the instructions at [immich-go](https://github.com/simulot/immich-go)
 
 ## Set up variables:
 Edit variables with your credentials inside the `if __name__ == "__main__":` block:
