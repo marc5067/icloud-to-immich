@@ -8,8 +8,7 @@ from collections import defaultdict
 def sanitize_name(name):
     """Sanitize the album name to make it a valid directory name."""
     return re.sub(r'[^\w\-_\. ]', '_', name.strip())
-
-
+    
 def stop(interactive):
     if not interactive:
         return
@@ -27,12 +26,9 @@ def check_tool(tool_name):
 def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactive):
     check_tool('icloudpd')
     check_tool('immich-go')
-    if not os.path.exists('.env'):
-        print("Error: .env file not found")
-        sys.exit(1)
 
     if not USERNAME or not USER_API:
-        print("Error: Missing iCloud username or immich api in .env file")
+        print("Error: Missing iCloud username or immich api")
         sys.exit(1)
 
     downloads_dir = os.path.join(base_dir, "downloads")
@@ -41,7 +37,6 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
     os.makedirs(base_dir, exist_ok=True)
     os.makedirs(downloads_dir, exist_ok=True)
     os.makedirs(albums_dir, exist_ok=True)
-
 
     # Authenticate with iCloud
     print("Authenticating with iCloud...")
@@ -77,7 +72,7 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
             continue
         if start_parsing and not line.startswith("DEBUG") and line not in exclude_albums:
             album_names.append(line)
-
+            
     print(f"Found albums: {album_names}")
 
     stop(interactive)
@@ -191,7 +186,6 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
 
     print(f"Uploaded all photos from {downloads_dir} and {albums_dir} to Immich server.")
     print(f"Don't forget to delete the downloaded files from {downloads_dir} and {albums_dir} if you don't need them anymore.")
-
 
 if __name__ == "__main__":
     base_dir = "C:\\Users\\user\\Documents\\images"  # Change this to your desired base directory. You must use double backslashes in Windows paths.
