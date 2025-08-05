@@ -13,6 +13,7 @@ This Python script downloads photos from iCloud, organizes them into albums, and
 - External tools:
    - icloudpd (iCloud Photos Downloader)
    - immich-go (Immich command-line tool)
+- Ensure sufficient disk space for downloaded photos. Storage needs depend on the number and size of photos
 
 ## Installation
 - Clone the repository:
