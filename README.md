@@ -34,7 +34,7 @@ Edit variables with your credentials inside the `if __name__ == "__main__":` blo
 - IMMICH_API = immich api key
 - ADMIN_API_KEY = immich admin api key
 - IMMICH_SERVER = immich url
-- interactive: Enables interactive prompts for user confirmation (default: enabled(True)).
+- interactive = True/False : Enables interactive prompts for user confirmation (default: enabled(True)).
 
 ## Usage
 Run the script with the following command:
