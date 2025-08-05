@@ -80,6 +80,8 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
 
     print(f"Found albums: {album_names}")
 
+    stop(interactive)
+
     # Get filenames for each album
     album_files = defaultdict(list)
     all_album_files = set()
@@ -186,6 +188,9 @@ def start(base_dir, USERNAME, USER_API, IMMICH_SERVER, ADMIN_API_KEY, interactiv
     if result2.returncode != 0:
         print(f"Failed to upload from {albums_dir}: {result2.stderr}")
         sys.exit(1)
+
+    print(f"Uploaded all photos from {downloads_dir} and {albums_dir} to Immich server.")
+    print(f"Don't forget to delete the downloaded files from {downloads_dir} and {albums_dir} if you don't need them anymore.")
 
 
 if __name__ == "__main__":
